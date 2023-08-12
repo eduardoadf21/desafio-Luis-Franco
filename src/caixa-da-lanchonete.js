@@ -59,8 +59,6 @@ class CaixaDaLanchonete {
         return 0
     }
 
-
-
     
 }
 
