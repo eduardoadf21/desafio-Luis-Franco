@@ -24,7 +24,6 @@ class CaixaDaLanchonete {
                         conta += (itens.getValor(item))*quantidade
                         break
                 }
-
             }
             return "R$ "+conta.toFixed(2).replace(".",",") 
         }
@@ -34,11 +33,11 @@ class CaixaDaLanchonete {
     checkPedido(metodoDePagamento,carrinho){
         if(carrinho.length == 0)
             return 'Não há itens no carrinho de compra!';
-        if (['credito', 'debito', 'dinheiro'].indexOf(metodoDePagamento) < 0) 
+        else if (['credito', 'debito', 'dinheiro'].indexOf(metodoDePagamento) < 0) 
             return 'Forma de pagamento inválida!';
         
 
-        let cafeExtrasAllowed=0, sanduicheExtrasAllowed=0
+        let cafeExtrasAllowed = 0, sanduicheExtrasAllowed = 0
         for(let i=0; i<carrinho.length;i++){
             const item = carrinho[i].split(',')[0]
             const quantidade = carrinho[i].split(',')[1]
